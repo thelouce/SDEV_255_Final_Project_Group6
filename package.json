@@ -1,0 +1,26 @@
+{
+  "name": "sdev_255_final_project_group6",
+  "version": "1.0.0",
+  "description": "Group 6 project \r Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelouce/SDEV_255_Final_Project_Group6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thelouce/SDEV_255_Final_Project_Group6/issues"
+  },
+  "homepage": "https://github.com/thelouce/SDEV_255_Final_Project_Group6#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.0.0",
+    "morgan": "^1.10.0"
+  }
+}
