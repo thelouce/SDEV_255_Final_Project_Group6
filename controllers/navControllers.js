@@ -15,8 +15,10 @@ const instructor_index = (req, res) =>{
 };
 
 const instructor_post = (req, res) =>{
-    console.log('placeholder while we post to this website');
-    res.redirect('/');
+    const course = new Course(req.body);
+    course.save()
+        .then((result) => res.redirect('/'))
+        .catch((err) => console.log(err));
 };
 
 const login_index = (req, res) =>{

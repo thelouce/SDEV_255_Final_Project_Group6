@@ -17,5 +17,6 @@ app.set('view engine', 'ejs');
 
  //middleware for the use of custom CSS
  app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
  app.use('/', navRoutes)

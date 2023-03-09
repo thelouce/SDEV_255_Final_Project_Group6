@@ -1,17 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const coursesSchema = new Schema({
+const courseSchema = new Schema({
     name: {
         type: String,
         required: true
     },
-    description:{
-        type: String,
-        required: true
-    },
     short:{
-        type:String,
+        type: String,
         required: true
     },
     instructor: {
@@ -21,8 +17,12 @@ const coursesSchema = new Schema({
     location: {
         type: String,
         default: 'Learn at Home'
+    },
+    description:{
+        type: String,
+        required: true
     }
 },{timestamps: true})
 
-const Course = mongoose.model('course',coursesSchema);
+const Course = mongoose.model('course',courseSchema);
 module.exports = Course;
