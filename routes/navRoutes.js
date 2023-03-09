@@ -6,8 +6,10 @@ const router = Router();
 
 router.get('/', navController.courses_index);
 
+router.get('/course', navController.courses_index);
+router.post('/course', navController.instructor_post);
+
 router.get('/instructor', navController.instructor_index);
-router.post('/instructor', navController.instructor_post);
 
 router.get('/login', navController.login_index);
 router.post('/login', navController.login_post);
