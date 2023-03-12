@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const navRoutes = require('./routes/navRoutes');
+const cookieParser = require('cookie-parser');
+const { checkUser } = require('./middleware/authMiddleware');
 
 //activate express
 const app = express();
@@ -13,10 +15,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
  
 //for views
 app.set('view engine', 'ejs');
+app.use(express.json());
+app.use(cookieParser());
 
 
  //middleware for the use of custom CSS
  app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
- app.use('/', navRoutes)
+app.use('*', checkUser);
+ app.use('/', navRoutes);

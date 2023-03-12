@@ -59,13 +59,27 @@ form{
         width: 80%;
 }
 
+select{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    font-size: 0.875em;
+    width: 80%;
+    margin: 20px 0 10px;
+}
+
 label{
         display: block;
         margin: 20px 0 10px;}
+
+
 textarea{
     width: 80%; 
 }
 
 div.mb-2{
     width: 20%;
+}
+.hidden {
+    display: none;
 }

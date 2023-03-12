@@ -4,23 +4,25 @@ const Schema = mongoose.Schema;
 const courseSchema = new Schema({
     name: {
         type: String,
-        required: true
+        required: [true, 'Course name is required']
     },
     short:{
         type: String,
-        required: true
+        required: [true, 'Short is required']
+    },
+    instructorID: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Instructor'
     },
     instructor: {
-        type: String,
-        required: true
+        type: String
     },
-    location: {
-        type: String,
-        default: 'Learn at Home'
+    credits: {
+        type: String
     },
     description:{
         type: String,
-        required: true
+        required: [true, 'Course description is required']
     }
 },{timestamps: true})
 
